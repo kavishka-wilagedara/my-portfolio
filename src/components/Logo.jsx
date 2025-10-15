@@ -1,0 +1,24 @@
+import React from "react";
+import logo from "../assets/logo.jpg";
+
+function Logo() {
+  return (
+    <div>
+      <a href="#home" className="relative inline-flex items-center">
+        <span className="bg-gradient-to-r ml-2 from-teal-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
+          Kavishka
+        </span>
+        <img
+          src={logo}
+          alt="logo"
+          className="w-12 h-12 rounded-full mx-1 relative z-10"
+        />
+        <span className="relative -ml-4 z-20 bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
+          ilagedara
+        </span>
+      </a>
+    </div>
+  );
+}
+
+export default Logo;
