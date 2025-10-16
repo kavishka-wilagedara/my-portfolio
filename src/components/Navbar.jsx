@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../Logo";
+import Logo from "./Logo";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseOutline } from "react-icons/io5";
 import { MdOutlineDarkMode } from "react-icons/md";
