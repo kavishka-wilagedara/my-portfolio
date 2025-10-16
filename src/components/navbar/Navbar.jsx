@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Logo from "../Logo";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseOutline } from "react-icons/io5";
+import { MdOutlineDarkMode } from "react-icons/md";
+import { MdArrowOutward } from "react-icons/md";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,45 +12,52 @@ function Navbar() {
     setIsMenuOpen(false);
   };
 
+  const handleDarkMode = () => {};
+
   return (
     <nav className="fixed top-0 w-full z-40 bg-rainbow shadow-md">
-      <div className="max-w-5xl mx-auto px-4 justify-items-center">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto justify-items-center">
+        <div className="flex items-center justify-between w-full px-6">
           {/* Logo */}
-          <div className="absolute left-0 flex items-center h-16">
-            <Logo />
-          </div>
+          <Logo />
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8 bg-white px-10 py-4 rounded-full text-sm">
-            <a
-              href="#home"
-              className="hover:text-xl hover:text-gray-800 transition-all"
-            >
+          <div className="hidden md:flex space-x-8 bg-white shadow-sm bg-opacity-50 px-10 py-4 rounded-full text-sm">
+            <a href="#home" className="hover:text-gray-600">
               Home
             </a>
-            <a
-              href="#about"
-              className="hover:text-xl hover:text-gray-800 transition-all"
-            >
+            <a href="#about" className="hover:text-gray-600">
               About me
             </a>
-            <a
-              href="#projects"
-              className="hover:text-xl hover:text-gray-800 transition-all"
-            >
+            <a href="#projects" className="hover:text-gray-600">
               Projects
             </a>
-            <a
-              href="#contact"
-              className="hover:text-xl hover:text-gray-800 transition-all"
-            >
+            <a href="#contact" className="hover:text-gray-600">
               Contact me
             </a>
           </div>
 
+          {/* Dark mode and contact section */}
+          <div className="flex items-center gap-3 md:gap-6">
+            <button
+              onClick={handleDarkMode}
+              className="p-2 rounded-full hover:bg-gray-600 transition-colors"
+            >
+              <MdOutlineDarkMode size={24} />
+            </button>
+            <div className="hidden md:block">
+              <a
+                href="#contact"
+                className="flex items-center px-3 py-3 rounded-full border"
+              >
+                <div className="px-4">Contact</div>
+                <MdArrowOutward size={24} />
+              </a>
+            </div>
+          </div>
+
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="flex md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-600 hover:text-gray-900 focus:outline-none"
