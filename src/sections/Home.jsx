@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col items-center justify-center text-center px-6"
+      className="min-h-screen flex flex-col items-center justify-center text-center px-6 bg-rainbow"
     >
       {/* Profile Image */}
       <div className="mt-5 relative">
