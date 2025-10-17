@@ -15,7 +15,7 @@ const About = () => {
         {/* Profile and Description */}
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12 mb-16">
           {/* Profile Image */}
-          <div className="lg:w-1/5 w-3/4 sm:w-1/2 overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500">
+          <div className="lg:w-1/7 w-3/4 sm:w-1/2 overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500">
             <img
               src={profileImg}
               alt="Profile"
@@ -25,7 +25,7 @@ const About = () => {
 
           {/* About Text */}
           <div className="lg:w-3/4 text-center lg:text-left space-y-6">
-            <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+            <p className="text-gray-700 lg:text-2xl sm:text-lg leading-relaxed">
               Passionate software developer who loves building clean, efficient,
               and scalable applications. I enjoy turning ideas into real-world
               solutions and exploring modern technologies to create meaningful
@@ -33,25 +33,11 @@ const About = () => {
               optimizing performance, and delivering smooth user experiences
               across every project.
             </p>
-
-            <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-              Currently, I'm gaining hands-on experience in software
-              development, where I work on designing APIs, integrating cloud
-              services, and improving backend systems. I'm always eager to
-              learn, grow, and collaborate on innovative projects that challenge
-              my skills and make a real impact. Outside of coding, I enjoy
-              exploring new tech trends and contributing to creative side
-              projects.
-            </p>
           </div>
         </div>
 
         {/* Skills Section */}
         <div className="mb-12 sm:mb-16">
-          {/* <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-10 text-gray-800 text-center">
-            Skills
-          </h3> */}
-
           <div className="max-w-5xl mx-auto space-y-8">
             {/* Languages & Frameworks */}
             <div>
