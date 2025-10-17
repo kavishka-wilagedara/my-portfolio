@@ -28,7 +28,7 @@ const Home = () => {
       </div>
       {/* Role */}
       <h1 className="text-3xl sm:text-5xl leading-tight mt-2">
-        Junior Full-Stack Developer
+        Full-Stack Developer
       </h1>
       {/* Description */}
       <p className="text-gray-600 text-sm md:text-base mt-2 max-w-lg">
