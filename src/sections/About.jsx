@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col items-center justify-center py-12 sm:py-20 bg-rainbow"
+      className="min-h-screen flex flex-col items-center justify-center py-12 sm:py-20 bg-rainbow font-mono"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12 text-gray-800 text-center">
