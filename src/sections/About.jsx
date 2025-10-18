@@ -42,10 +42,10 @@ const About = () => {
             {/* Languages & Frameworks */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-[#ca29f2] rounded-xl flex items-center justify-center shadow-lg">
                   <span className="text-2xl">💻</span>
                 </div>
-                <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800">
+                <h4 className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-br from-purple-500 to-pink-500 bg-clip-text text-transparent">
                   Languages & Frameworks
                 </h4>
               </div>
@@ -75,32 +75,34 @@ const About = () => {
             {/* Databases */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-[#1bb523] rounded-xl flex items-center justify-center shadow-lg">
                   <span className="text-2xl">🗄️</span>
                 </div>
-                <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800">
+                <h4 className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-br from-green-700 to-emerald-600 bg-clip-text text-transparent">
                   Databases
                 </h4>
               </div>
               <div className="flex flex-wrap gap-2 sm:gap-3">
-                {["MySQL", "MongoDB", "Redis"].map((db, index) => (
-                  <span
-                    key={index}
-                    className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-green-100 to-emerald-100 rounded-full text-green-800 text-xs sm:text-sm lg:text-base font-semibold hover:from-green-200 hover:to-emerald-200 hover:scale-110 transition-all duration-200 cursor-default shadow-sm"
-                  >
-                    {db}
-                  </span>
-                ))}
+                {["MySQL", "MongoDB", "PostgreSQL", "Redis"].map(
+                  (db, index) => (
+                    <span
+                      key={index}
+                      className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-green-100 to-emerald-100 rounded-full text-green-800 text-xs sm:text-sm lg:text-base font-semibold hover:from-green-200 hover:to-emerald-200 hover:scale-110 transition-all duration-200 cursor-default shadow-sm"
+                    >
+                      {db}
+                    </span>
+                  )
+                )}
               </div>
             </div>
 
             {/* Tools */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br bg-[#144d9c] rounded-xl flex items-center justify-center shadow-lg">
                   <span className="text-2xl">🛠️</span>
                 </div>
-                <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800">
+                <h4 className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-700 to-blue-700 bg-clip-text text-transparent">
                   Tools
                 </h4>
               </div>
