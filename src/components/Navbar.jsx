@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "./Logo";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseOutline } from "react-icons/io5";
@@ -6,13 +6,29 @@ import { MdOutlineDarkMode, MdArrowOutward } from "react-icons/md";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const handleLinkClick = () => setIsMenuOpen(false);
 
   const handleDarkMode = () => {};
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 1) {
+        setScrolled(true);
+      } else setScrolled(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="fixed top-0 w-full z-50 bg-purple-50 shadow-md">
+    <nav
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-purple-50 shadow-md" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <Logo />
