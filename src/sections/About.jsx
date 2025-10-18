@@ -129,9 +129,11 @@ const About = () => {
             <div className="relative z-10">
               <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-start">
                 Education
-              </h3>{" "}
-              <div className="absolute inset-0 rounded-xl border-b-4 border-r-4 border-black opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none"></div>
-              <div className="p-4 sm:p-5 rounded-lg sm:rounded-xl bg-rainbow">
+              </h3>
+
+              <div className="absolute inset-0 rounded-xl"></div>
+
+              <div className="p-4 sm:p-5 rounded-lg sm:rounded-xl bg-rainbow border-b-4 border-r-4 border-transparent group-hover:border-black">
                 <p className="text-gray-800 text-base sm:text-lg font-bold mb-2">
                   B.Sc. in Science
                 </p>
@@ -151,8 +153,8 @@ const About = () => {
               <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-start">
                 Work Experience
               </h3>{" "}
-              <div className="absolute inset-0 rounded-xl border-b-4 border-r-4 border-black opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none"></div>
-              <div className="p-4 sm:p-5 rounded-lg sm:rounded-xl bg-rainbow">
+              <div className="absolute inset-0 rounded-xl"></div>
+              <div className="p-4 sm:p-5 rounded-lg sm:rounded-xl bg-rainbow border-b-4 border-r-4 border-transparent group-hover:border-black">
                 <h4 className="text-base sm:text-lg font-bold text-gray-800 mb-1">
                   Software Engineer Intern
                 </h4>
