@@ -11,9 +11,10 @@ const Contact = () => {
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12 text-gray-800 text-center">
           Get In Touch
         </h2>
-        <p className="text-center max-w-2xl mx-auto mt-5 mb-12">
-          I had love to hear from you! If you have any questions, comments, or
-          feedback, please use the form below.{" "}
+
+        <p className="text-center max-w-2xl mx-auto mt-5">
+          I’d love to hear from you! If you have any questions, comments, or
+          feedback, please use the form below.
         </p>
 
         <form className="max-w-2xl mx-auto">
