@@ -8,7 +8,7 @@ const Contact = () => {
       className="min-h-screen flex flex-col items-center justify-center py-12 sm:py-20 bg-rainbow font-mono"
     >
       <div>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12 text-gray-800 text-center">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 text-gray-800 text-center mt-10">
           Get In Touch
         </h2>
 

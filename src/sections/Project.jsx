@@ -59,11 +59,11 @@ const Project = () => {
       className="min-h-screen flex flex-col items-center justify-center py-20 font-mono bg-rainbow"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12 text-gray-800 text-center">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 text-gray-800 text-center mt-10">
           Recent Work
-        </h1>
+        </h2>
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-5">
           {projects.map((project, index) => (
             <div
               key={index}

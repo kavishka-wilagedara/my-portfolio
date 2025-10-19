@@ -8,12 +8,12 @@ const About = () => {
       className="min-h-screen flex flex-col items-center justify-center py-12 sm:py-20 bg-rainbow font-mono"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12 text-gray-800 text-center">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 text-gray-800 text-center mt-10">
           About Me
         </h2>
 
         {/* Profile and Description */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12 mb-16">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12 mt-5">
           {/* Profile Image */}
           <div className="lg:w-1/7 w-3/4 sm:w-1/2 overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500">
             <img
