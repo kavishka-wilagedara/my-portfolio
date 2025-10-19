@@ -1,7 +1,32 @@
-import React from "react";
+import { useState } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Contact = () => {
+  const access_key = import.meta.env.VITE_ACCESS_KEY;
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", access_key);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
   return (
     <section
       id="contact"
@@ -17,7 +42,7 @@ const Contact = () => {
           feedback, please use the form below.
         </p>
 
-        <form className="max-w-2xl mx-auto">
+        <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
           <div className="grid grid-cols-2 gap-6 mt-10 mb-8">
             <input
               type="text"
@@ -25,6 +50,7 @@ const Contact = () => {
               placeholder="Enter your name"
               required
               className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+              name="name"
             />
             <input
               type="email"
@@ -32,6 +58,7 @@ const Contact = () => {
               placeholder="Enter your email"
               required
               className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+              name="email"
             />
           </div>
           <textarea
@@ -39,6 +66,7 @@ const Contact = () => {
             placeholder="Enter your message"
             required
             className="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+            name="message"
           ></textarea>
           <button
             type="submit"
@@ -47,6 +75,7 @@ const Contact = () => {
             Submit now
             <IoIosArrowRoundForward size={24} />
           </button>
+          <p className="mt-5">{result}</p>
         </form>
       </div>
     </section>
