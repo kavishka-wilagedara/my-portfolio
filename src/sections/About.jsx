@@ -15,7 +15,7 @@ const About = () => {
         {/* Profile and Description */}
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12 mt-5">
           {/* Profile Image */}
-          <div className="lg:w-1/7 w-3/4 sm:w-1/2 overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500">
+          <div className="lg:w-1/6 w-3/4 sm:w-1/2 overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500">
             <img
               src={profileImg}
               alt="Profile"
@@ -25,7 +25,7 @@ const About = () => {
 
           {/* About Text */}
           <div className="lg:w-3/4 text-center lg:text-left space-y-6">
-            <p className="text-gray-700 lg:text-2xl sm:text-lg leading-relaxed text-justify">
+            <p className="text-gray-700 lg:text-2xl sm:text-lg leading-relaxed sm:text-justify">
               Passionate software developer who loves building clean, efficient,
               and scalable applications. I enjoy turning ideas into real-world
               solutions and exploring modern technologies to create meaningful
