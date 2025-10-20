@@ -25,7 +25,7 @@ const About = () => {
 
           {/* About Text */}
           <div className="lg:w-3/4 text-center lg:text-left space-y-6">
-            <p className="text-gray-700 lg:text-2xl sm:text-lg leading-relaxed">
+            <p className="text-gray-700 lg:text-2xl sm:text-lg leading-relaxed text-justify">
               Passionate software developer who loves building clean, efficient,
               and scalable applications. I enjoy turning ideas into real-world
               solutions and exploring modern technologies to create meaningful
