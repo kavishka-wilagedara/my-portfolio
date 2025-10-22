@@ -86,7 +86,7 @@ const Project = () => {
                 </p>
               </div>
 
-              <p className="text-sm text-gray-600 leading-relaxed mb-4 rounded-xl border-1 border-gray-100 bg-rainbow">
+              <p className="text-sm text-gray-600 leading-relaxed mb-4 rounded-xl border-gray-100 bg-rainbow">
                 {project.infor}
               </p>
 
@@ -94,11 +94,10 @@ const Project = () => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-6 w-full justify-center py-2 px-4 
-     bg-gradient-to-r from-blue-500 to-blue-600 
-     text-white text-sm font-semibold rounded-lg 
-     hover:from-blue-600 hover:to-blue-700 
-     transition-all duration-300 shadow-md hover:shadow-lg"
+                className="inline-flex items-center gap-6 w-full justify-center py-2 px-4  
+               text-white text-sm font-semibold rounded-lg 
+               hover:from-blue-600 hover:to-blue-700 
+                transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 <VscGithubAlt size={24} />
                 View on GitHub
