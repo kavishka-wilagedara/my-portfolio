@@ -70,7 +70,7 @@ const Contact = () => {
           ></textarea>
           <button
             type="submit"
-            className="mt-5 py-3 px-7 w-max mx-auto flex items-center justify-between gap-3 text-white rounded-full bg-gray-700 hover:bg-black"
+            className="mt-5 py-3 px-7 w-max mx-auto flex items-center justify-between gap-3 text-white rounded-full bg-black hover:bg-gray-900"
           >
             Submit now
             <IoIosArrowRoundForward size={24} />
