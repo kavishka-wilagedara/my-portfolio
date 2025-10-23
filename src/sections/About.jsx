@@ -45,7 +45,7 @@ const About = () => {
                 <div className="w-12 h-12 bg-[#ca29f2] rounded-xl flex items-center justify-center shadow-lg">
                   <span className="text-2xl">💻</span>
                 </div>
-                <h4 className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-br from-purple-500 to-pink-500 bg-clip-text text-transparent">
+                <h4 className="text-lg sm:text-xl lg:text-2xl font-bold bg-linear-to-br from-purple-500 to-pink-500 bg-clip-text text-transparent">
                   Languages & Frameworks
                 </h4>
               </div>
@@ -64,7 +64,7 @@ const About = () => {
                 ].map((skill, index) => (
                   <span
                     key={index}
-                    className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full text-purple-800 text-xs sm:text-sm lg:text-base font-semibold hover:from-purple-200 hover:to-pink-200 hover:scale-110 transition-all duration-200 cursor-default shadow-sm"
+                    className="px-3 sm:px-4 py-1.5 sm:py-2 bg-linear-to-r from-purple-100 to-pink-100 rounded-full text-purple-800 text-xs sm:text-sm lg:text-base font-semibold hover:from-purple-200 hover:to-pink-200 hover:scale-110 transition-all duration-200 cursor-default shadow-sm"
                   >
                     {skill}
                   </span>
@@ -78,7 +78,7 @@ const About = () => {
                 <div className="w-12 h-12 bg-[#1bb523] rounded-xl flex items-center justify-center shadow-lg">
                   <span className="text-2xl">🗄️</span>
                 </div>
-                <h4 className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-br from-green-700 to-emerald-600 bg-clip-text text-transparent">
+                <h4 className="text-lg sm:text-xl lg:text-2xl font-bold bg-linear-to-br from-green-700 to-emerald-600 bg-clip-text text-transparent">
                   Databases
                 </h4>
               </div>
@@ -87,7 +87,7 @@ const About = () => {
                   (db, index) => (
                     <span
                       key={index}
-                      className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-green-100 to-emerald-100 rounded-full text-green-800 text-xs sm:text-sm lg:text-base font-semibold hover:from-green-200 hover:to-emerald-200 hover:scale-110 transition-all duration-200 cursor-default shadow-sm"
+                      className="px-3 sm:px-4 py-1.5 sm:py-2 bg-linear-to-r from-green-100 to-emerald-100 rounded-full text-green-800 text-xs sm:text-sm lg:text-base font-semibold hover:from-green-200 hover:to-emerald-200 hover:scale-110 transition-all duration-200 cursor-default shadow-sm"
                     >
                       {db}
                     </span>
@@ -99,10 +99,10 @@ const About = () => {
             {/* Tools */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br bg-[#144d9c] rounded-xl flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-[#144d9c] rounded-xl flex items-center justify-center shadow-lg">
                   <span className="text-2xl">🛠️</span>
                 </div>
-                <h4 className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-700 to-blue-700 bg-clip-text text-transparent">
+                <h4 className="text-lg sm:text-xl lg:text-2xl font-bold bg-linear-to-br from-blue-700 to-blue-700 bg-clip-text text-transparent">
                   Tools
                 </h4>
               </div>
@@ -111,7 +111,7 @@ const About = () => {
                   (tool, index) => (
                     <span
                       key={index}
-                      className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-blue-100 to-cyan-100 rounded-full text-blue-800 text-xs sm:text-sm lg:text-base font-semibold hover:from-blue-200 hover:to-cyan-200 hover:scale-110 transition-all duration-200 cursor-default shadow-sm"
+                      className="px-3 sm:px-4 py-1.5 sm:py-2 bg-linear-to-r from-blue-100 to-cyan-100 rounded-full text-blue-800 text-xs sm:text-sm lg:text-base font-semibold hover:from-blue-200 hover:to-cyan-200 hover:scale-110 transition-all duration-200 cursor-default shadow-sm"
                     >
                       {tool}
                     </span>
@@ -167,7 +167,7 @@ const About = () => {
 
                 <ul className="space-y-2 text-gray-700 text-xs sm:text-sm">
                   <li className="flex items-start">
-                    <span className="text-blue-500 mr-2 mt-0.5 flex-shrink-0">
+                    <span className="text-blue-500 mr-2 mt-0.5 shrink-0">
                       •
                     </span>
                     <span>
@@ -176,7 +176,7 @@ const About = () => {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-blue-500 mr-2 mt-0.5 flex-shrink-0">
+                    <span className="text-blue-500 mr-2 mt-0.5 shrink-0">
                       •
                     </span>
                     <span>
@@ -184,7 +184,7 @@ const About = () => {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-blue-500 mr-2 mt-0.5 flex-shrink-0">
+                    <span className="text-blue-500 mr-2 mt-0.5 shrink-0">
                       •
                     </span>
                     <span>
@@ -193,7 +193,7 @@ const About = () => {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-blue-500 mr-2 mt-0.5 flex-shrink-0">
+                    <span className="text-blue-500 mr-2 mt-0.5 shrink-0">
                       •
                     </span>
                     <span>
@@ -201,7 +201,7 @@ const About = () => {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-blue-500 mr-2 mt-0.5 flex-shrink-0">
+                    <span className="text-blue-500 mr-2 mt-0.5 shrink-0">
                       •
                     </span>
                     <span>
