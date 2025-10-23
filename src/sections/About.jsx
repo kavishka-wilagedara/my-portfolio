@@ -1,5 +1,7 @@
 import React from "react";
 import profileImg from "../assets/profile-img.jpg";
+import oracleImg from "../assets/oracle.jpg";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const About = () => {
   return (
@@ -123,26 +125,54 @@ const About = () => {
         </div>
 
         {/* Education & Work Experience */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 text-gray-700">
           {/* Education */}
-          <div className="group relative p-4 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl bg-rainbow backdrop-blur-sm border border-indigo-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div className="relative p-4 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl bg-rainbow backdrop-blur-sm border border-indigo-100 shadow-md transition-all duration-300">
             <div className="relative z-10">
               <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-start">
                 Education
               </h3>
+              <div className="group hover:-translate-y-0.5 hover:shadow-lg transition-transform duration-300">
+                <div className="p-4 sm:p-5 rounded-lg sm:rounded-xl bg-white border-b-3 border-r-3 border-transparent group-hover:border-black">
+                  <p className="text-gray-800 text-base sm:text-lg font-bold mb-2">
+                    B.Sc. in Science
+                  </p>
+                  <p className="text-gray-600 text-sm sm:text-base">
+                    Faculty of Science, University of Kelaniya
+                  </p>
+                  <p className="text-indigo-600 font-semibold text-sm sm:text-base mt-2">
+                    2022 - 2025
+                  </p>
+                </div>
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-start mt-5">
+                Certificates
+              </h3>
 
-              <div className="absolute inset-0 rounded-xl"></div>
-
-              <div className="p-4 sm:p-5 rounded-lg sm:rounded-xl bg-rainbow border-b-4 border-r-4 border-transparent group-hover:border-black">
-                <p className="text-gray-800 text-base sm:text-lg font-bold mb-2">
-                  B.Sc. in Science
-                </p>
-                <p className="text-gray-600 text-sm sm:text-base">
-                  Faculty of Science, University of Kelaniya
-                </p>
-                <p className="text-indigo-600 font-semibold text-sm sm:text-base mt-2">
-                  2022 - 2025
-                </p>
+              <div className="group hover:-translate-y-0.5 hover:shadow-lg transition-transform duration-300">
+                <div className="p-4 sm:p-5 rounded-lg sm:rounded-xl bg-white border-b-3 border-r-3 border-transparent group-hover:border-black">
+                  <p className="text-gray-800 text-base sm:text-lg font-bold mb-2 flex items-center">
+                    <img
+                      src={oracleImg}
+                      alt="Oracle Logo"
+                      className="w-6 h-6 rounded-full sm:w-8 sm:h-8 mr-3 shrink-0"
+                    />
+                    <span className="text-start">
+                      MySQL Implementation Certified Associate
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-end mt-5 text-center">
+                <a
+                  href="https://www.linkedin.com/in/kavishka-wilagedara-10779b344/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center px-5 py-2 text-white rounded-4xl bg-black hover:bg-gray-900 transition-colors duration-300 "
+                >
+                  see more
+                  <IoIosArrowRoundForward size={24} />
+                </a>
               </div>
             </div>
           </div>
@@ -154,7 +184,7 @@ const About = () => {
                 Work Experience
               </h3>{" "}
               <div className="absolute inset-0 rounded-xl"></div>
-              <div className="p-4 sm:p-5 rounded-lg sm:rounded-xl bg-rainbow border-b-4 border-r-4 border-transparent group-hover:border-black">
+              <div className="p-4 sm:p-5 rounded-lg sm:rounded-xl bg-rainbow border-b-3 border-r-3 border-transparent group-hover:border-black">
                 <h4 className="text-base sm:text-lg font-bold text-gray-800 mb-1">
                   Software Engineer Intern
                 </h4>
