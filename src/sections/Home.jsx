@@ -14,47 +14,40 @@ const Home = () => {
       className="min-h-screen relative flex flex-col items-center justify-center text-center px-6 bg-rainbow font-mono overflow-hidden"
     >
       {/* ANIMATED CURVED SWEEP LINE */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+      {/* <div className="hidden sm:block absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none">
         <svg
           className="absolute inset-0 w-full h-full"
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
         >
-          <defs>
-            {/* LIGHT MODE RAINBOW GRADIENT */}
-            <linearGradient id="arcGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <defs> */}
+      {/* LIGHT MODE RAINBOW GRADIENT */}
+      {/* <linearGradient id="arcGradient" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="rgb(253, 186, 116)" />{" "}
               {/* Orange-300 */}
-              <stop offset="30%" stopColor="rgb(244, 114, 182)" />{" "}
-              {/* Pink-400 */}
-              <stop offset="50%" stopColor="rgb(196, 181, 253)" />{" "}
-              {/* Violet-300 */}
-              <stop offset="70%" stopColor="rgb(96, 165, 250)" />{" "}
-              {/* Blue-400 */}
-              <stop offset="100%" stopColor="rgb(103, 232, 249)" />{" "}
-              {/* Cyan-300 */}
-            </linearGradient>
-
-            {/* Glow filter */}
-            <filter id="glow">
+      {/* <stop offset="30%" stopColor="rgb(244, 114, 182)" /> {/* Pink-400 */}
+      {/* <stop offset="50%" stopColor="rgb(196, 181, 253)" /> Violet-300 */}
+      {/* <stop offset="70%" stopColor="rgb(96, 165, 250)" /> Blue-400 */}
+      {/* <stop offset="100%" stopColor="rgb(103, 232, 249)" /> Cyan-300  */}
+      {/* </linearGradient> */}
+      {/* Glow filter */}
+      {/* <filter id="glow">
               <feGaussianBlur stdDeviation="0.8" result="coloredBlur" />
               <feMerge>
                 <feMergeNode in="coloredBlur" />
                 <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
-          </defs>
-
-          {/* Invisible Guide Path */}
-          <path
+          </defs> */}
+      {/* Invisible Guide Path */}
+      {/* <path
             d="M 10 95 Q 50 10, 90 95"
             fill="none"
             stroke="transparent"
             strokeWidth="2"
-          />
-
-          {/* Visible Sweeping Line */}
-          <path
+          /> */}
+      {/* Visible Sweeping Line */}
+      {/* <path
             d="M 10 95 Q 50 10, 90 95"
             fill="none"
             stroke="url(#arcGradient)"
@@ -66,8 +59,7 @@ const Home = () => {
             className="animate-stroke-sweep"
           />
         </svg>
-      </div>
-
+      </div> */}
       {/* HOMEPAGE CONTENT */}
       <div className="relative z-10 flex flex-col items-center justify-center pt-25 pb-20">
         {/* Profile Image */}
@@ -82,14 +74,19 @@ const Home = () => {
         </div>
 
         {/* Name */}
-        <div className="flex items-center justify-center gap-2 mt-15">
-          <h3 className="text-xl md:text-2xl">Hi! I'm Kavishka Wilagedara</h3>
+        <div className="flex items-center justify-center gap-2 mt-10">
+          <h1 className="text-xl md:text-3xl font-extrabold">
+            Hi! I'm Kavishka Wilagedara
+          </h1>
           <img src={handIcon} alt="wave" className="w-6 h-6" />
         </div>
 
         {/* Role */}
         <div className="mt-2 flex justify-center">
-          <h1 className="text-3xl sm:text-5xl leading-tight font-bold text-black typewriter-text">
+          <h1
+            className="text-3xl sm:text-5xl leading-tight font-bold typewriter-text 
+               bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+          >
             Full-Stack Developer
           </h1>
         </div>
