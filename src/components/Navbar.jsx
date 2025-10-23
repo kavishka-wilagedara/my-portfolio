@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import Logo from "./Logo";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseOutline } from "react-icons/io5";
-import { MdOutlineDarkMode, MdArrowOutward } from "react-icons/md";
+import { MdArrowOutward } from "react-icons/md";
+import { CiShare2 } from "react-icons/ci";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +11,21 @@ function Navbar() {
 
   const handleLinkClick = () => setIsMenuOpen(false);
 
-  const handleDarkMode = () => {};
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: "Kavishka Wilagedara | Full-Stack Developer Portfolio",
+          text: "Check out this portfolio!",
+          url: window.location.href,
+        })
+        .catch(console.error);
+    } else {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        alert("Profile link copied to clipboard!");
+      });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,10 +67,10 @@ function Navbar() {
         {/* Dark mode & Contact button */}
         <div className="flex items-center gap-3 md:gap-6">
           <button
-            onClick={handleDarkMode}
+            onClick={handleShare}
             className="p-2 rounded-full hover:bg-gray-200 transition-colors"
           >
-            <MdOutlineDarkMode size={24} />
+            <CiShare2 size={24} />
           </button>
           <div className="hidden md:block">
             <a
