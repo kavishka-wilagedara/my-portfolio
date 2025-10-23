@@ -72,7 +72,7 @@ const Project = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group relative p-6 rounded-2xl bg-white/70 backdrop-blur-md shadow-lg border border-gray-400
+              className="group relative p-6 rounded-2xl bg-white/70 backdrop-blur-md shadow-lg border border-gray-100
       hover:shadow-2xl hover:-translate-y-2 hover:border-b-4 hover:border-r-4 hover:border-b-black hover:border-r-black transition-all duration-500 ease-out"
             >
               {/* Floating gradient glow */}
@@ -114,9 +114,9 @@ const Project = () => {
             href="https://github.com/kavishka-wilagedara?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-2 text-white rounded-lg bg-black hover:bg-gray-900 transition-colors duration-300 "
+            className="flex items-center px-5 py-2 text-white rounded-4xl bg-black hover:bg-gray-900 transition-colors duration-300 "
           >
-            Explore More Projects
+            see more
             <IoIosArrowRoundForward size={24} />
           </a>
         </div>
