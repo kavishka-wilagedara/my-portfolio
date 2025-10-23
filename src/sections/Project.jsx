@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { VscGithubAlt } from "react-icons/vsc";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Project = () => {
   const [projects] = useState([
@@ -24,7 +25,7 @@ const Project = () => {
       type: "Backend - Group Project",
       techStack: "Java, Spring Boot, MySQL",
       infor:
-        "Developed a Spring Boot and MySQL-based Inventory Management System with REST APIs, including product CRUD operations, expiry notifications, and feedback services for efficient tracking and continuous improvement.",
+        "Developed a Spring Boot and MySQL-based Inventory Management System with REST APIs, including product CRUD operations, expiry notifications, and feedback services for system improvement.",
       github: "https://github.com/chamuda-arangalla/Inventory-Management",
     },
     {
@@ -62,31 +63,34 @@ const Project = () => {
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 text-gray-800 text-center mt-2 sm:mt-10">
           Recent Work
         </h2>
+        <p className="text-center max-w-2xl mx-auto mt-5">
+          Here are some of the projects I’ve been working on recently,
+          showcasing my skills in full-stack development.
+        </p>
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-5">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group p-5 sm:p-5 rounded-lg sm:rounded-xl bg-rainbow
-             border-b-2 border-r-2 border-gray-300 
-             hover:border-b-4 hover:border-r-4 hover:border-black
-             transition-all duration-300"
+              className="group relative p-6 rounded-2xl bg-white/70 backdrop-blur-md shadow-lg border border-gray-400
+      hover:shadow-2xl hover:-translate-y-2 hover:border-b-4 hover:border-r-4 hover:border-b-black hover:border-r-black transition-all duration-500 ease-out"
             >
-              <h3 className="text-2xl font-bold mb-2 text-gray-900 group-hover:text-gray-600 transition-colors">
+              {/* Floating gradient glow */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 bg-linear-to-br from-blue-200 via-purple-200 to-pink-200 blur-2xl -z-10 transition-opacity duration-700"></div>
+
+              <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-blue-700 transition-colors duration-300">
                 {project.name}
               </h3>
 
-              <div className="inline-block px-3 py-1 mb-3 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full border border-blue-200">
+              <div className="inline-block px-3 py-1 mb-4 bg-linear-to-r from-blue-50 to-purple-50 text-blue-700 text-xs font-semibold rounded-full border border-blue-200 shadow-sm">
                 {project.type}
               </div>
 
-              <div className="mb-3">
-                <p className="text-sm font-semibold text-gray-700 bg-gray-50 px-3 py-2 rounded-md border-l-4 border-blue-400">
-                  {project.techStack}
-                </p>
-              </div>
+              <p className="text-sm font-medium text-gray-700 bg-gray-50 px-3 py-2 mb-3 rounded-md border-l-4 border-blue-400 shadow-inner">
+                {project.techStack}
+              </p>
 
-              <p className="text-sm text-gray-600 leading-relaxed mb-4 rounded-xl border-gray-100 bg-rainbow">
+              <p className="text-sm text-gray-600 leading-relaxed mb-6">
                 {project.infor}
               </p>
 
@@ -94,16 +98,27 @@ const Project = () => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-6 w-full justify-center py-2 px-4  
-               text-white text-sm font-semibold rounded-lg 
-               hover:from-blue-600 hover:to-blue-700 
-                transition-all duration-300 shadow-md hover:shadow-lg"
+                className="inline-flex items-center justify-center gap-3 w-full py-2.5 px-5 text-white text-sm font-semibold 
+        rounded-xl bg-linear-to-r from-blue-600 to-purple-600 hover:from-purple-700 hover:to-blue-700
+        transition-all duration-300 shadow-md hover:shadow-xl"
               >
-                <VscGithubAlt size={24} />
+                <VscGithubAlt size={22} />
                 View on GitHub
               </a>
             </div>
           ))}
+        </div>
+
+        <div className="flex justify-end  mt-10 text-center">
+          <a
+            href="https://github.com/kavishka-wilagedara?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-5 py-2 text-white rounded-lg bg-black hover:bg-gray-900 transition-colors duration-300 "
+          >
+            Explore More Projects
+            <IoIosArrowRoundForward size={24} />
+          </a>
         </div>
       </div>
     </section>
