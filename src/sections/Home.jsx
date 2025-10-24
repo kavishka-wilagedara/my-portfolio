@@ -1,67 +1,85 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import profileImg from "../assets/profile-img.jpg";
 import handIcon from "../assets/hand-icon.png";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { MdOutlineFileDownload } from "react-icons/md";
 
 const Home = () => {
-  const dashLength = 250;
-  const dashGap = 50;
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      const progress = Math.min(scrollY / (windowHeight * 0.8), 1);
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const linePosition = 50 + scrollProgress * 40;
 
   return (
     <section
       id="home"
       className="min-h-screen relative flex flex-col items-center justify-center text-center px-6 bg-rainbow font-mono overflow-hidden"
     >
-      {/* ANIMATED CURVED SWEEP LINE */}
-      {/* <div className="hidden sm:block absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+      {/* ANIMATED CURVED LINE */}
+      <div
+        id="rainbow-line"
+        className="absolute left-0 right-100 w-full h-22 pointer-events-none transition-all duration-700 ease-out"
+        style={{
+          top: `${linePosition}vh`,
+          opacity: 1 - scrollProgress * 0.1, // Fades when moves
+          transform: `scale(${2.8 + scrollProgress * 0.2})`,
+        }}
+      >
         <svg
-          className="absolute inset-0 w-full h-full"
+          className="w-full h-full"
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
         >
-          <defs> */}
-      {/* LIGHT MODE RAINBOW GRADIENT */}
-      {/* <linearGradient id="arcGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="rgb(253, 186, 116)" />{" "}
-              {/* Orange-300 */}
-      {/* <stop offset="30%" stopColor="rgb(244, 114, 182)" /> {/* Pink-400 */}
-      {/* <stop offset="50%" stopColor="rgb(196, 181, 253)" /> Violet-300 */}
-      {/* <stop offset="70%" stopColor="rgb(96, 165, 250)" /> Blue-400 */}
-      {/* <stop offset="100%" stopColor="rgb(103, 232, 249)" /> Cyan-300  */}
-      {/* </linearGradient> */}
-      {/* Glow filter */}
-      {/* <filter id="glow">
-              <feGaussianBlur stdDeviation="0.8" result="coloredBlur" />
+          <defs>
+            <linearGradient id="arcGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="rgb(253, 186, 116)" />
+              <stop offset="25%" stopColor="rgb(244, 114, 182)" />
+              <stop offset="50%" stopColor="rgb(196, 181, 253)" />
+              <stop offset="75%" stopColor="rgb(96, 165, 250)" />
+              <stop offset="100%" stopColor="rgb(103, 232, 249)" />
+            </linearGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="1.5" result="coloredBlur" />
               <feMerge>
                 <feMergeNode in="coloredBlur" />
                 <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
-          </defs> */}
-      {/* Invisible Guide Path */}
-      {/* <path
-            d="M 10 95 Q 50 10, 90 95"
-            fill="none"
-            stroke="transparent"
-            strokeWidth="2"
-          /> */}
-      {/* Visible Sweeping Line */}
-      {/* <path
-            d="M 10 95 Q 50 10, 90 95"
+          </defs>
+
+          {/* Main curved line */}
+          <path
+            d="M 5 95 Q 50 20, 95 95"
             fill="none"
             stroke="url(#arcGradient)"
-            strokeWidth="1.5"
+            strokeWidth="2"
             strokeLinecap="round"
             filter="url(#glow)"
-            opacity="0.95"
-            style={{ strokeDasharray: `${dashLength} ${dashGap}` }}
-            className="animate-stroke-sweep"
+            style={{
+              strokeDasharray: "1000",
+              strokeDashoffset: 1000 - scrollProgress * 800,
+              transition: "stroke-dashoffset 0.3s ease-out",
+            }}
           />
         </svg>
-      </div> */}
+      </div>
+
       {/* HOMEPAGE CONTENT */}
-      <div className="relative z-10 flex flex-col items-center justify-center pt-25 pb-20">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
         {/* Profile Image */}
         <div className="relative">
           <div className="w-44 sm:w-56 lg:w-64 h-44 sm:h-56 lg:h-64 rounded-full overflow-hidden border-4 border-gray-300 shadow-lg hover:scale-105 transition-transform duration-500">
