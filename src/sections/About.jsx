@@ -133,14 +133,17 @@ const About = () => {
                 Education
               </h3>
               <div className="group hover:-translate-y-0.5 hover:shadow-lg transition-transform duration-300">
-                <div className="p-4 sm:p-5 rounded-lg sm:rounded-xl bg-white border-b-3 border-r-3 border-transparent group-hover:border-black">
-                  <p className="text-gray-800 text-base sm:text-lg font-bold mb-2">
-                    Bachelor of Science(Bsc)
-                  </p>
+                <div className="p-4 sm:p-5 rounded-lg sm:rounded-xl bg-white border-b-3 border-r-3 border-transparent group-hover:border-black transition-all duration-300">
+                  <h3 className="text-gray-800 text-base sm:text-lg font-bold mb-1">
+                    Bachelor of Science
+                  </h3>
                   <p className="text-gray-600 text-sm sm:text-base">
-                    Faculty of Science, University of Kelaniya
+                    Department of Statistics and Computer Science
                   </p>
-                  <p className="text-indigo-600 font-semibold text-sm sm:text-base mt-2">
+                  <p className="text-gray-600 text-sm sm:text-base font-extrabold">
+                    University of Kelaniya
+                  </p>
+                  <p className="text-blue-600 font-semibold text-xs sm:text-sm mt-2 mb-3">
                     2022 - 2025
                   </p>
                 </div>
