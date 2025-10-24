@@ -39,10 +39,8 @@ export default function LoadingAnimation() {
 
         <div className="flex flex-col items-center justify-center text-center mt-6 sm:mt-8 px-4">
           {/* Loading Text */}
-          <h2 className="text-white text-xl sm:text-2xl font-semibold tracking-widest uppercase relative overflow-hidden mb-4 sm:mb-6">
-            Loading
-            <span className="absolute bottom-0 left-0 w-full h-0.5 sm:h-1 bg-linear-to-r from-teal-400 via-blue-500 to-indigo-600 animate-shimmer"></span>
-          </h2>
+
+          <div className="absolute bottom-0 left-0 w-full h-0.5 sm:h-1 bg-linear-to-r from-teal-400 via-blue-500 to-indigo-600 animate-shimmer"></div>
 
           {/* Name */}
           <p className="text-black text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide mb-1 sm:mb-2">
