@@ -135,7 +135,7 @@ const About = () => {
               <div className="group hover:-translate-y-0.5 hover:shadow-lg transition-transform duration-300">
                 <div className="p-4 sm:p-5 rounded-lg sm:rounded-xl bg-white border-b-3 border-r-3 border-transparent group-hover:border-black">
                   <p className="text-gray-800 text-base sm:text-lg font-bold mb-2">
-                    B.Sc. in Science
+                    Bachelor of Science(Bsc)
                   </p>
                   <p className="text-gray-600 text-sm sm:text-base">
                     Faculty of Science, University of Kelaniya
