@@ -5,6 +5,14 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 const Project = () => {
   const [projects] = useState([
     {
+      name: "Micro Flow Mart",
+      type: "Backend - Individual Project",
+      techStack: "Java, Spring Boot, Kafka, MySQL",
+      infor:
+        "Microservices backend to manage products, orders, and inventory across multiple services. The system uses a combination of synchronous and asynchronous communication between services.",
+        github: "https://github.com/kavishka-wilagedara/micro-flow-mart",
+    },
+    {
       name: "Club Master",
       type: "Backend - Individual Project",
       techStack: "Java, Spring Boot, MongoDB",
